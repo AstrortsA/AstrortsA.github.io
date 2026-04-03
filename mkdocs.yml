@@ -1,17 +1,26 @@
 site_name: AstrortsA 的个人网站
 site_url: https://astrortsa.github.io/
-site_description: 个人学习与科研网站
+site_description: 记录我的大学生活、学习成果与科研探索
 
+# 完全复刻NJU-ASA的Material主题配置
 theme:
   name: material
+  language: zh
+  font:
+    text: "STHeiti Light"
+    code: "Consolas"
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - toc.integrate
+    - search.suggest
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
-  font:
-    text: Noto Sans SC
-    code: Roboto Mono
+      primary: purple
+      accent: indigo
 
+# 导航栏（和NJU-ASA结构完全一致）
 nav:
   - 首页: index.md
   - 个人简历: resume.md
@@ -24,9 +33,11 @@ nav:
   - 每日笔记: notes.md
   - 精彩分享: share.md
 
+# Markdown扩展（支持侧边栏、表格等）
 markdown_extensions:
   - admonition
-  - toc
+  - toc:
+      permalink: true
   - tables
   - pymdownx.details
   - pymdownx.superfences
