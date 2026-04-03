@@ -1,248 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstrortsA 的个人网站</title>
-    <style>
-        /* 全局样式重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft Yahei", "Helvetica Neue", Arial, sans-serif;
-        }
-
-        /* 顶部导航栏 */
-        .navbar {
-            background-color: #1a365d;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .navbar-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #63b3ed;
-        }
-
-        /* 首页横幅（Hero 区） */
-        .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('https://picsum.photos/id/1002/1920/1080');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 6rem 5%;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            background: #3182ce;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #2b6cb0;
-        }
-
-        /* 内容卡片区 */
-        .content-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 5%;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #1a365d;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #3182ce;
-        }
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 1.5rem;
-        }
-        .card-content h3 {
-            color: #1a365d;
-            margin-bottom: 0.8rem;
-        }
-        .card-content p {
-            color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        /* 页脚 */
-        footer {
-            background: #1a365d;
-            color: white;
-            text-align: center;
-            padding: 2rem 5%;
-            margin-top: 4rem;
-        }
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-        .social-links {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #63b3ed;
-        }
-
-        /* 响应式适配 */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstrortsA - 首页</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 顶部导航栏 -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="logo">AstrortsA</a>
-            <ul class="nav-links">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">关于我</a></li>
-                <li><a href="#">项目</a></li>
-                <li><a href="#">笔记</a></li>
-                <li><a href="#">联系我</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="logo">AstrortsA</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页</a>
+      <a href="resume.html">简历</a>
+      <a href="study.html">学习</a>
+      <a href="research.html">科研</a>
+      <a href="notes.html">笔记</a>
+      <a href="share.html">分享</a>
+    </div>
+  </nav>
 
-    <!-- 首页横幅 -->
-    <section class="hero">
-        <h1>欢迎来到 AstrortsA 的个人网站</h1>
-        <p>这里是我的个人作品集、项目展示和学习笔记分享平台，记录我的科研与成长之路。</p>
-        <a href="#" class="btn">了解更多</a>
-    </section>
+  <div class="container">
+    <!-- 首页欢迎语 -->
+    <div class="hero">
+      <h1>欢迎来到 AstrortsA 的个人网站</h1>
+      <p>记录我的大学生活、学习成果与科研探索</p>
+    </div>
 
-    <!-- 内容卡片区 -->
-    <section class="content-section">
-        <h2 class="section-title">我的项目</h2>
-        <div class="cards-container">
-            <!-- 项目卡片1 -->
-            <div class="card">
-                <img src="https://picsum.photos/id/1/600/400" alt="项目1" class="card-img">
-                <div class="card-content">
-                    <h3>GRAND 宇宙射线实验</h3>
-                    <p>基于 Python 的宇宙射线数据处理与分析项目，处理.root 数据文件，优化数据分析流程。</p>
-                    <a href="#" class="btn">查看详情</a>
-                </div>
-            </div>
-            <!-- 项目卡片2 -->
-            <div class="card">
-                <img src="https://picsum.photos/id/2/600/400" alt="项目2" class="card-img">
-                <div class="card-content">
-                    <h3>个人网站搭建</h3>
-                    <p>使用 GitHub Pages 搭建的个人静态网站，展示个人作品、学习笔记和科研成果。</p>
-                    <a href="#" class="btn">查看详情</a>
-                </div>
-            </div>
-            <!-- 项目卡片3 -->
-            <div class="card">
-                <img src="https://picsum.photos/id/3/600/400" alt="项目3" class="card-img">
-                <div class="card-content">
-                    <h3>HTML 小游戏开发</h3>
-                    <p>使用 HTML、CSS、JavaScript 开发的网页小游戏，如贪吃蛇、打砖块等，可直接在线游玩。</p>
-                    <a href="#" class="btn">查看详情</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 网站介绍 -->
+    <div class="card">
+      <h2>关于本站</h2>
+      <p>这是我的个人数字空间，包含：</p>
+      <ul style="margin: 1rem 0 0 2rem;">
+        <li>📄 个人简历</li>
+        <li>📚 学习笔记</li>
+        <li>🔭 科研项目</li>
+        <li>📝 每日笔记</li>
+        <li>🌟 精彩分享</li>
+      </ul>
+      <p style="margin-top: 1rem;">点击上方导航栏即可快速访问对应页面~</p>
+    </div>
+  </div>
 
-    <!-- 页脚 -->
-    <footer>
-        <p>© 2025 AstrortsA. All rights reserved.</p>
-        <p>基于 GitHub Pages 搭建</p>
-        <div class="social-links">
-            <a href="https://github.com/AstrortsA" target="_blank">GitHub</a>
-            <!-- 可以加更多社交链接，比如邮箱、LinkedIn -->
-        </div>
-    </footer>
+  <footer>
+    <p>© 2025 AstrortsA. 基于 GitHub Pages 搭建</p>
+  </footer>
 </body>
 </html>
