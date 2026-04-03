@@ -1,0 +1,32 @@
+site_name: AstrortsA 的个人网站
+site_url: https://astrortsa.github.io/
+site_description: 个人学习与科研网站
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+  font:
+    text: Noto Sans SC
+    code: Roboto Mono
+
+nav:
+  - 首页: index.md
+  - 个人简历: resume.md
+  - 学习历程:
+    - 大一: study/freshman.md
+    - 大二: study/sophomore.md
+    - 大三: study/junior.md
+    - 大四: study/senior.md
+  - 科研项目: research.md
+  - 每日笔记: notes.md
+  - 精彩分享: share.md
+
+markdown_extensions:
+  - admonition
+  - toc
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
