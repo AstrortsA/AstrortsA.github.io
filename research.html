@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstrortsA - 科研</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">AstrortsA</div>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="resume.html">简历</a>
+      <a href="study.html">学习</a>
+      <a href="research.html" class="active">科研</a>
+      <a href="notes.html">笔记</a>
+      <a href="share.html">分享</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 2rem;">科研项目</h1>
+
+    <div class="card">
+      <h2>GRAND 宇宙射线实验数据分析</h2>
+      <p style="margin: 1rem 0;"><strong>项目简介：</strong>参与GRAND宇宙射线探测实验，负责ROOT格式数据文件的读取、预处理与分析，使用Python实现数据可视化流程，优化数据分析脚本效率。</p>
+      <p><strong>技术栈：</strong>Python、ROOT、C++、Linux、Git</p>
+      <p style="margin-top: 1rem;"><strong>GitHub 仓库链接：</strong></p>
+      <a href="https://github.com/AstrortsA/GRAND-analysis" target="_blank" style="font-size: 1.2rem; color: #3498db; font-weight: bold;">
+        https://github.com/AstrortsA/GRAND-analysis
+      </a>
+      <p style="margin-top: 1rem;"><strong>项目状态：</strong>进行中</p>
+    </div>
+
+    <div class="card">
+      <h2>添加新科研项目</h2>
+      <form>
+        <div class="form-group">
+          <label>项目名称：</label>
+          <input type="text" placeholder="请输入项目名称">
+        </div>
+        <div class="form-group">
+          <label>项目描述：</label>
+          <textarea rows="4" placeholder="请输入项目简介"></textarea>
+        </div>
+        <div class="form-group">
+          <label>GitHub仓库链接：</label>
+          <input type="text" placeholder="请输入仓库链接">
+        </div>
+        <button type="submit">添加项目</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AstrortsA. 基于 GitHub Pages 搭建</p>
+  </footer>
+</body>
+</html>
