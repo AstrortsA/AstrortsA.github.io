@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstrortsA - 分享</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">AstrortsA</div>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="resume.html">简历</a>
+      <a href="study.html">学习</a>
+      <a href="research.html">科研</a>
+      <a href="notes.html">笔记</a>
+      <a href="share.html" class="active">分享</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 2rem;">精彩分享</h1>
+
+    <div class="card">
+      <h2>添加新分享</h2>
+      <form>
+        <div class="form-group">
+          <label>分享类型：</label>
+          <select>
+            <option>链接/网站</option>
+            <option>图片</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>标题：</label>
+          <input type="text" placeholder="请输入分享标题">
+        </div>
+        <div class="form-group">
+          <label>链接/图片地址：</label>
+          <input type="text" placeholder="请输入链接或图片URL">
+        </div>
+        <div class="form-group">
+          <label>描述：</label>
+          <textarea rows="2" placeholder="简单介绍一下这个分享"></textarea>
+        </div>
+        <button type="submit">添加分享</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>分享列表</h2>
+      <ul class="item-list">
+        <li>
+          <strong><a href="https://github.com" target="_blank">GitHub</a></strong>
+          <p>全球最大的代码托管平台，我的科研项目都在这里</p>
+        </li>
+        <li>
+          <strong><a href="https://www.nju.edu.cn" target="_blank">南京大学官网</a></strong>
+          <p>我的母校，天文学专业的顶尖学府</p>
+        </li>
+        <li>
+          <strong><a href="https://arxiv.org" target="_blank">arXiv</a></strong>
+          <p>预印本平台，获取最新天文科研成果</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AstrortsA. 基于 GitHub Pages 搭建</p>
+  </footer>
+</body>
+</html>
