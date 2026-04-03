@@ -21,29 +21,112 @@
   </nav>
 
   <div class="container">
-    <!-- 首页欢迎语 -->
-    <div class="hero">
+    <!-- 升级后的首页横幅 -->
+    <div class="hero hero-new">
       <h1>欢迎来到 AstrortsA 的个人网站</h1>
       <p>记录我的大学生活、学习成果与科研探索</p>
+      <a href="resume.html" class="btn-hero">查看我的简历</a>
     </div>
 
-    <!-- 网站介绍 -->
-    <div class="card">
-      <h2>关于本站</h2>
-      <p>这是我的个人数字空间，包含：</p>
-      <ul style="margin: 1rem 0 0 2rem;">
-        <li>📄 个人简历</li>
-        <li>📚 学习笔记</li>
-        <li>🔭 科研项目</li>
-        <li>📝 每日笔记</li>
-        <li>🌟 精彩分享</li>
-      </ul>
-      <p style="margin-top: 1rem;">点击上方导航栏即可快速访问对应页面~</p>
+    <!-- 功能卡片区 -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>个人简历</h3>
+        <p>完整的大学生求职简历，展示我的教育背景、技能与科研经历</p>
+        <a href="resume.html" class="btn-card">立即查看</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>学习历程</h3>
+        <p>按年级分类的课程体系，随时上传学习资料与笔记</p>
+        <a href="study.html" class="btn-card">进入学习</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔭</div>
+        <h3>科研项目</h3>
+        <p>我的GitHub科研仓库，展示宇宙射线实验数据分析成果</p>
+        <a href="research.html" class="btn-card">查看项目</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>每日笔记</h3>
+        <p>随时记录学习感悟与科研思考，永久保存</p>
+        <a href="notes.html" class="btn-card">写笔记</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3>精彩分享</h3>
+        <p>收藏喜欢的链接、网站与图片，分享优质内容</p>
+        <a href="share.html" class="btn-card">浏览分享</a>
+      </div>
     </div>
   </div>
 
   <footer>
     <p>© 2025 AstrortsA. 基于 GitHub Pages 搭建</p>
   </footer>
+
+  <!-- 补充首页美化样式 -->
+  <style>
+    .hero-new {
+      background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+      padding: 6rem 2rem;
+      border-radius: 16px;
+    }
+    .btn-hero {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: #1a2980;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .btn-hero:hover {
+      transform: translateY(-3px);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    .btn-card {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      background: #3498db;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn-card:hover {
+      background: #2980b9;
+    }
+  </style>
 </body>
 </html>
