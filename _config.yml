@@ -9,7 +9,7 @@ permalink: /:path/  # 核心：去掉.html后缀，标准网页链接
 # 手动配置导航栏（完全自定义，不会自动列文件夹！）
 nav:
   - 首页: /
-  - 个人简历: /resume/
+  - 个人简历: /resume/index.md
   - 学习历程: /study/
     - 大一: /study/freshman/
       - 第一学期: /study/freshman/1_semester/
@@ -30,8 +30,8 @@ nav:
       - 第一学期: /study/senior/1_semester/
         - 毕业设计: /study/senior/1_semester/thesis/
   - 科研项目: /research/
-  - 每日笔记: /notes/
-  - 精彩分享: /share/
+  - 每日笔记: /notes/index.md
+  - 精彩分享: /share/index.md
 
 # 主题配置（用 minima 主题，手动覆盖导航）
 theme: minima
