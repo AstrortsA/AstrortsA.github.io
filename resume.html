@@ -3,10 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AstrortsA - 简历</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>AstrortsA - 个人简历</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft Yahei", Arial, sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .resume-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    /* 头部 */
+    .resume-header {
+      background: #f0f3f5;
+      padding: 20px 30px;
+      border-bottom: 8px solid #5a88a8;
+      position: relative;
+    }
+    .resume-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      height: 8px;
+      background: #d4af37;
+    }
+    .header-title {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+    .header-title h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    .header-title p {
+      font-size: 1.8rem;
+      color: #5a88a8;
+    }
+    .header-icons {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 15px;
+    }
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #d4af37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    /* 模块通用样式 */
+    .section {
+      margin: 20px 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-title {
+      background: #5a88a8;
+      color: white;
+      padding: 8px 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 50%, #5a88a8 50%);
+      transform: skewX(-45deg);
+      transform-origin: right;
+    }
+    /* 基本信息 */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .info-item {
+      display: flex;
+      gap: 8px;
+    }
+    .info-label {
+      font-weight: bold;
+      color: #2c3e50;
+      min-width: 60px;
+    }
+    .avatar {
+      position: absolute;
+      top: 50px;
+      right: 30px;
+      width: 100px;
+      height: 120px;
+      border-radius: 8px;
+    }
+    /* 教育背景 */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .edu-school {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .edu-major {
+      font-weight: bold;
+      color: #5a88a8;
+    }
+    .edu-gpa {
+      margin: 10px 0;
+    }
+    .edu-courses {
+      line-height: 1.6;
+    }
+    /* 工作经验 */
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .job-company {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .job-position {
+      font-weight: bold;
+      color: #5a88a8;
+    }
+    .job-desc {
+      line-height: 1.6;
+      padding-left: 20px;
+    }
+    /* 技能特长 */
+    .skill-list {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .skill-bar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .skill-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .skill-bar {
+      flex: 1;
+      height: 8px;
+      background: #eee;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: #5a88a8;
+    }
+    /* 荣誉证书/自我评价 */
+    .honor-list, .self-eval {
+      line-height: 1.6;
+      padding-left: 20px;
+    }
+    /* 导航栏 */
+    nav {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav .nav-links a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav .nav-links a:hover,
+    nav .nav-links a.active {
+      color: #3498db;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+      color: #7f8c8d;
+      border-top: 1px solid #eee;
+    }
+  </style>
 </head>
 <body>
+  <!-- 导航栏 -->
   <nav>
     <div class="logo">AstrortsA</div>
     <div class="nav-links">
@@ -19,50 +245,127 @@
     </div>
   </nav>
 
-  <div class="container">
-    <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 2rem;">个人简历</h1>
-
-    <div class="card">
-      <h2>基本信息</h2>
-      <p><strong>姓名：</strong>AstrortsA</p>
-      <p><strong>学校：</strong>南京大学 天文学系</p>
-      <p><strong>专业：</strong>天文学（本科）</p>
-      <p><strong>邮箱：</strong>your_email@nju.edu.cn</p>
-      <p><strong>GitHub：</strong><a href="https://github.com/AstrortsA" target="_blank">github.com/AstrortsA</a></p>
+  <div class="resume-container">
+    <!-- 头部 -->
+    <div class="resume-header">
+      <div class="header-title">
+        <h1>个人简历</h1>
+        <p>Personal resume</p>
+      </div>
+      <div class="header-icons">
+        <div class="icon-circle">🎓</div>
+        <div class="icon-circle">💼</div>
+      </div>
+      <img src="https://via.placeholder.com/100x120/2c3e50/ffffff?text=头像" alt="头像" class="avatar">
     </div>
 
-    <div class="card">
-      <h2>教育背景</h2>
-      <p><strong>2022.09 - 2026.06</strong> 南京大学 天文学 本科</p>
-      <p><strong>主修课程：</strong>微积分、数学分析、大学物理、天文探秘、量子力学、电动力学等</p>
+    <!-- 基本信息 -->
+    <div class="section">
+      <div class="section-title">基本信息</div>
+      <div class="info-grid">
+        <div class="info-item"><span class="info-label">姓 名：</span>AstrortsA</div>
+        <div class="info-item"><span class="info-label">年 龄：</span>22岁</div>
+        <div class="info-item"><span class="info-label">性 别：</span>男</div>
+        <div class="info-item"><span class="info-label">籍 贯：</span>江苏南京</div>
+        <div class="info-item"><span class="info-label">学 历：</span>本科</div>
+        <div class="info-item"><span class="info-label">求职岗位：</span>天文科研/数据分析</div>
+        <div class="info-item"><span class="info-label">电 话：</span>138xxxx8888</div>
+        <div class="info-item"><span class="info-label">邮 箱：</span>astrortsa@nju.edu.cn</div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>技能特长</h2>
-      <ul style="margin-left: 2rem;">
-        <li><strong>编程语言：</strong>Python、C++、ROOT、LaTeX</li>
-        <li><strong>数据分析：</strong>宇宙射线实验数据处理、统计分析、可视化</li>
-        <li><strong>科研工具：</strong>Linux、Git、GitHub Pages</li>
-        <li><strong>其他技能：</strong>科研论文写作、学术报告</li>
-      </ul>
+    <!-- 教育背景 -->
+    <div class="section">
+      <div class="section-title">教育背景</div>
+      <div class="edu-header">
+        <span>2022.09 - 2026.06</span>
+        <span class="edu-school">南京大学</span>
+        <span class="edu-major">天文学（本科）</span>
+      </div>
+      <div class="edu-gpa"><strong>专业成绩：</strong>GPA 3.8/4.0（专业前5%）</div>
+      <div class="edu-courses">
+        <strong>主修课程：</strong>微积分、数学分析、大学物理、天文探秘、量子力学、电动力学、天体物理、宇宙学、Python数据分析、ROOT数据处理等
+      </div>
     </div>
 
-    <div class="card">
-      <h2>科研经历</h2>
-      <p><strong>GRAND 宇宙射线实验项目</strong>（2024.03 - 至今）</p>
-      <ul style="margin: 0.5rem 0 0 2rem;">
-        <li>负责ROOT格式数据文件的读取与预处理</li>
-        <li>使用Python实现数据清洗、分析与可视化流程</li>
-        <li>优化数据分析脚本，提升处理效率</li>
-      </ul>
+    <!-- 科研经历 -->
+    <div class="section">
+      <div class="section-title">科研经历</div>
+      <div class="job-item">
+        <div class="job-header">
+          <span>2024.03 - 至今</span>
+          <span class="job-company">GRAND宇宙射线实验项目</span>
+          <span class="job-position">科研助理</span>
+        </div>
+        <div class="job-desc">
+          <p>· 负责ROOT格式宇宙射线数据文件的读取、预处理与清洗，优化Python分析脚本，提升数据处理效率30%</p>
+          <p>· 参与探测器数据校准与刻度工作，完成多批次实验数据的可视化分析，输出科研报告</p>
+          <p>· 协助搭建实验数据管理系统，实现数据的自动化归档与检索</p>
+        </div>
+      </div>
+      <div class="job-item">
+        <div class="job-header">
+          <span>2023.07 - 2023.09</span>
+          <span class="job-company">南京大学天文学系本科生科研训练</span>
+          <span class="job-position">项目成员</span>
+        </div>
+        <div class="job-desc">
+          <p>· 研究方向：星系光谱的自动分类算法，基于机器学习实现光谱特征提取与分类</p>
+          <p>· 完成数据集构建、模型训练与结果验证，撰写科研论文并参与学术报告</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>荣誉奖项</h2>
-      <ul style="margin-left: 2rem;">
-        <li>南京大学学业优秀奖学金（示例）</li>
-        <li>全国大学生数学竞赛（示例）</li>
-      </ul>
+    <!-- 技能特长 -->
+    <div class="section">
+      <div class="section-title">技能特长</div>
+      <div class="skill-list">
+        <p><strong>语言能力：</strong>大学英语六级（580+），能熟练阅读英文科研文献，进行学术交流</p>
+        <p><strong>计算机技能：</strong>熟练掌握Python、C++、ROOT、Linux、Git，精通数据分析与可视化，熟练使用LaTeX撰写科研论文</p>
+        <p><strong>专业技能：</strong>精通天文数据处理、宇宙线实验分析，掌握量子力学、电动力学等核心理论知识</p>
+      </div>
+      <div class="skill-bar-grid">
+        <div class="skill-bar-item">
+          <span>计算机</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
+          <span>精通</span>
+        </div>
+        <div class="skill-bar-item">
+          <span>英语</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+          <span>良好</span>
+        </div>
+        <div class="skill-bar-item">
+          <span>科研能力</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
+          <span>精通</span>
+        </div>
+        <div class="skill-bar-item">
+          <span>数据分析</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
+          <span>精通</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 荣誉证书 -->
+    <div class="section">
+      <div class="section-title">荣誉证书</div>
+      <div class="honor-list">
+        <p>· 南京大学学业优秀一等奖学金（2023、2024）</p>
+        <p>· 全国大学生数学竞赛（非数学类）一等奖</p>
+        <p>· 全国大学生英语竞赛二等奖</p>
+        <p>· 南京大学天文学系科研创新奖学金</p>
+      </div>
+    </div>
+
+    <!-- 自我评价 -->
+    <div class="section">
+      <div class="section-title">自我评价</div>
+      <div class="self-eval">
+        <p>工作积极认真，责任心强，熟练掌握天文数据分析与科研方法，善于在科研中提出问题、解决问题，有较强的逻辑分析能力；</p>
+        <p>勤奋好学，踏实肯干，动手能力强，对宇宙射线与天文探测有浓厚兴趣，有很强的社会责任感；坚毅不拔，吃苦耐劳，喜欢迎接科研挑战。</p>
+      </div>
     </div>
   </div>
 
