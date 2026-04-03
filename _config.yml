@@ -4,12 +4,15 @@ description: 记录我的大学生活、学习成果与科研探索
 baseurl: ""
 url: "https://astrortsa.github.io"
 markdown: kramdown
-permalink: /:path/  # 核心：去掉.html后缀，标准网页链接
+
+# 核心：去掉.html后缀，标准网页链接
+permalink: /:path/
 
 # 手动配置导航栏（完全自定义，不会自动列文件夹！）
+# 注意：层级用2个空格缩进，绝对不能用tab！
 nav:
   - 首页: /
-  - 个人简历: /resume/index.md
+  - 个人简历: /resume/
   - 学习历程: /study/
     - 大一: /study/freshman/
       - 第一学期: /study/freshman/1_semester/
@@ -19,8 +22,8 @@ nav:
     - 大二: /study/sophomore/
       - 第一学期: /study/sophomore/1_semester/
         - 大学物理: /study/sophomore/1_semester/physics/
+        - 天文探秘: /study/sophomore/1_semester/astronomy/
       - 第二学期: /study/sophomore/2_semester/
-      
     - 大三: /study/junior/
       - 第一学期: /study/junior/1_semester/
         - 量子力学: /study/junior/1_semester/quantum/
@@ -30,8 +33,8 @@ nav:
       - 第一学期: /study/senior/1_semester/
         - 毕业设计: /study/senior/1_semester/thesis/
   - 科研项目: /research/
-  - 每日笔记: /notes/index.md
-  - 精彩分享: /share/index.md
+  - 每日笔记: /notes/
+  - 精彩分享: /share/
 
 # 主题配置（用 minima 主题，手动覆盖导航）
 theme: minima
