@@ -1,12 +1,11 @@
 ---
-title: 每日笔记
+title: 学习笔记
 ---
 
-# 每日笔记
+# 学习笔记
 
-## 笔记列表
-- [2025-04-03 个人网站搭建笔记](sslocal://flow/file_open?url=notes%2F2025-04-03-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- [2025-04-02 MkDocs使用总结](sslocal://flow/file_open?url=notes%2F2025-04-02-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- [2025-04-01 宇宙射线数据处理笔记](sslocal://flow/file_open?url=notes%2F2025-04-01-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+这里将分享可公开的学习笔记与资料。
 
-> 后续直接在`docs/notes/`下新建`.md`文件，在这里加链接即可
+## 下载资料
+
+目前还没有上传可下载文件。整理完成后会在这里列出。
