@@ -1,15 +1,13 @@
-site_name: AstrortsA 的个人网站
+site_name: AstrortsA 的学习笔记
 site_url: https://astrortsa.github.io/
-site_description: 记录我的大学生活、学习成果与科研探索
+site_description: 学习笔记与资料分享
 
-# 完全复刻NJU-ASA的Material主题配置
 theme:
   name: material
   language: zh
   font:
     text: "STHeiti Light"
     code: "Consolas"
-
   features:
     - navigation.instant
     - navigation.tabs
@@ -20,20 +18,17 @@ theme:
       primary: purple
       accent: indigo
 
-# 导航栏（和NJU-ASA结构完全一致）
 nav:
   - 首页: index.md
-  - 个人简历: resume.md
-  - 学习历程:
-    - 大一: study/freshman.md
-    - 大二: study/sophomore.md
-    - 大三: study/junior.md
-    - 大四: study/senior.md
-  - 科研项目: research.md
-  - 每日笔记: notes.md
-  - 精彩分享: share.md
+  - 学习笔记: notes.md
 
-# Markdown扩展（支持侧边栏、表格等）
+# 这些原稿保留在仓库中，但不生成网站页面或进入站内搜索。
+exclude_docs: |
+  /resume.md
+  /research.md
+  /share.md
+  /study/
+
 markdown_extensions:
   - admonition
   - toc:
