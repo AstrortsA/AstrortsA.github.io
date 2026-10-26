@@ -4,9 +4,11 @@ title: 大三
 
 # 大三
 
-以下课程名称参考 [NJU-ASA](https://github.com/nju-astronomy/NJU-ASA)；资料将在核对后陆续补充。
+以下课程名称参考 [NJU-ASA](https://github.com/nju-astronomy/NJU-ASA)；其余资料将在核对后陆续补充。
 
 ## 量子力学
+
+- [量子力学前五章复习教程（PDF，55 页）](quantum-mechanics-review.md)
 
 ## 电动力学
 

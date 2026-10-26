@@ -34,6 +34,10 @@ exclude_docs: |
   /share.md
   /study/
 
+# 资料预览页通过课程名称进入，不单独占用课程导航。
+not_in_nav: |
+  /courses/quantum-mechanics-review.md
+
 markdown_extensions:
   - admonition
   - toc:
