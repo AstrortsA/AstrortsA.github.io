@@ -20,7 +20,12 @@ theme:
 
 nav:
   - 首页: index.md
-  - 学习笔记: notes.md
+  - 学习笔记:
+    - 课程总览: notes.md
+    - 大一: courses/year1.md
+    - 大二: courses/year2.md
+    - 大三: courses/year3.md
+    - 大四: courses/year4.md
 
 # 这些原稿保留在仓库中，但不生成网站页面或进入站内搜索。
 exclude_docs: |
