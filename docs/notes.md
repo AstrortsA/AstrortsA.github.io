@@ -1,12 +1,16 @@
 ---
-title: 每日笔记
+title: 学习笔记
 ---
 
-# 每日笔记
+# 学习笔记
 
-## 笔记列表
-- [2025-04-03 个人网站搭建笔记](sslocal://flow/file_open?url=notes%2F2025-04-03-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- [2025-04-02 MkDocs使用总结](sslocal://flow/file_open?url=notes%2F2025-04-02-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- [2025-04-01 宇宙射线数据处理笔记](sslocal://flow/file_open?url=notes%2F2025-04-01-note.md&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+按学年整理课程笔记与可公开分享的资料。选择左侧的大一至大四，即可查看相应课程。课程目录参考 [NJU-ASA](https://github.com/nju-astronomy/NJU-ASA)，后续可按自己的学习经历调整。
 
-> 后续直接在`docs/notes/`下新建`.md`文件，在这里加链接即可
+## 课程目录
+
+- [大一](courses/year1.md)
+- [大二](courses/year2.md)
+- [大三](courses/year3.md)
+- [大四](courses/year4.md)
+
+目前已提供[量子力学前五章复习教程](courses/year3.md#_2)；其余课程资料将在整理后陆续补充。
